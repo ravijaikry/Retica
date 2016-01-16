@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use mysql as the database for Active Record
-gem 'mysql2', '~> 0.3.18'
+ gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -23,9 +23,12 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'sass', '3.2.19' 
 gem 'bower-rails'
+gem 'angular-rails-templates'
+
 
 gem "foreman"
 group :production, :staging do
+
   gem "rails_12factor"
   gem "rails_stdout_logging"
   gem "rails_serve_static_assets"
@@ -36,6 +39,12 @@ group :test, :development do
   gem "capybara"
   gem "database_cleaner"
   gem "selenium-webdriver"
+  gem 'teaspoon-jasmine'
+  gem 'phantomjs'
+end
+
+group :production do
+  # gem 'pg'
 end
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
